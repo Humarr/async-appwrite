@@ -54,6 +54,7 @@ result = users.create(ID.unique(), email = "email@example.com", phone = "+123456
 from async_appwrite.async_client import AsyncClient
 from async_appwrite.services.async_users import AsyncUsers
 from appwrite.id import ID
+import asyncio
 
 client = AsyncClient()
 
@@ -66,7 +67,14 @@ client = AsyncClient()
 
 users = AsyncUsers(client)
 
-result = users.create(ID.unique(), email = "email@example.com", phone = "+123456789", password = "password", name = "Walter O'Brien")
+async def create_user():
+    result = await users.create(ID.unique(), email="email@example.com", phone="+123456789", password="password", name="Walter O'Brien")
+    return result
+
+if __name__ == "__main__":
+    user_result = asyncio.run(create_user())
+    print(user_result)
+
 ```
 
 ### Error Handling
@@ -74,10 +82,15 @@ The Appwrite Python SDK raises `AppwriteException` object with `message`, `code`
 
 ```python
 users = AsyncUsers(client)
-try:
-  result = users.create(ID.unique(), email = "email@example.com", phone = "+123456789", password = "password", name = "Walter O'Brien")
-except AppwriteException as e:
-  print(e.message)
+async def create_user():
+    try:
+        result = await users.create(ID.unique(), email = "email@example.com", phone = "+123456789", password = "password", name = "Walter O'Brien")
+    except AppwriteException as e:
+        print(e.message)
+
+if __name__ == "__main__":
+    user_result = asyncio.run(create_user())
+    print(user_result)
 ```
 
 ### Learn more
