@@ -2,7 +2,6 @@ from ..async_service import AsyncService
 from appwrite.exception import AppwriteException
 
 from ..async_client import AsyncClient
-from appwrite.services.account import Account
 
 
 class AsyncAccount(AsyncService):

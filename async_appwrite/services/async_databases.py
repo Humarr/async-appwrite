@@ -1,6 +1,5 @@
 from ..async_service import AsyncService
 from appwrite.exception import AppwriteException
-from appwrite.services.databases import Databases
 from ..async_client import AsyncClient
 
 

@@ -1,7 +1,6 @@
 from ..async_service import AsyncService
 from appwrite.exception import AppwriteException
 from ..async_client import AsyncClient
-from appwrite.services.functions import Functions
 
 
 class AsyncFunctions(AsyncService):

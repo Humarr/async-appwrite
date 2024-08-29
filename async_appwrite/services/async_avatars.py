@@ -1,7 +1,6 @@
 from ..async_client import AsyncClient
 from ..async_service import AsyncService
 from appwrite.exception import AppwriteException
-from appwrite.services.avatars import Avatars
 
 
 class AsyncAvatars(AsyncService):
