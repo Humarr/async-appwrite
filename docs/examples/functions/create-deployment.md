@@ -1,12 +1,14 @@
-from appwrite.client import Client
+from async_appwrite.async_client import AsyncClient
+from async_appwrite.services.async_functions import AsyncFunctions
+
 from appwrite.input_file import InputFile
 
-client = Client()
+client = AsyncClient()
 client.set_endpoint('https://cloud.appwrite.io/v1') # Your API Endpoint
 client.set_project('<YOUR_PROJECT_ID>') # Your project ID
 client.set_key('<YOUR_API_KEY>') # Your secret API key
 
-functions = Functions(client)
+functions = AsyncFunctions(client)
 
 result = functions.create_deployment(
     function_id = '<FUNCTION_ID>',

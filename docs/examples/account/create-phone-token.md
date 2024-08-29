@@ -1,10 +1,11 @@
-from appwrite.client import Client
+from async_appwrite.async_client import AsyncClient
+from async_appwrite.services.async_account import AsyncAccount
 
-client = Client()
+client = AsyncClient()
 client.set_endpoint('https://cloud.appwrite.io/v1') # Your API Endpoint
 client.set_project('<YOUR_PROJECT_ID>') # Your project ID
 
-account = Account(client)
+account = AsyncAccount(client)
 
 result = account.create_phone_token(
     user_id = '<USER_ID>',

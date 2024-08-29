@@ -1,4 +1,4 @@
-# Appwrite Python SDK
+# Appwrite Python SDK (Asynchronous Version)
 
 ![License](https://img.shields.io/github/license/appwrite/sdk-for-python.svg?style=flat-square)
 ![Version](https://img.shields.io/badge/api%20version-1.6.0-blue.svg?style=flat-square)
@@ -17,7 +17,7 @@ Appwrite is an open-source backend as a service server that abstract and simplif
 To install via [PyPI](https://pypi.org/):
 
 ```bash
-pip install appwrite
+pip install async_appwrite
 ```
 
 
@@ -27,10 +27,10 @@ pip install appwrite
 Initialize your SDK with your Appwrite server API endpoint and project ID which can be found on your project settings page and your new API secret Key from project's API keys section.
 
 ```python
-from appwrite.client import Client
-from appwrite.services.users import Users
+from async_appwrite.async_client import AsyncClient
+from async_appwrite.services.async_users import AsyncUsers
 
-client = Client()
+client = AsyncClient()
 
 (client
   .set_endpoint('https://[HOSTNAME_OR_IP]/v1') # Your API Endpoint
@@ -44,18 +44,18 @@ client = Client()
 Once your SDK object is set, create any of the Appwrite service objects and choose any request to send. Full documentation for any service method you would like to use can be found in your SDK documentation or in the [API References](https://appwrite.io/docs) section.
 
 ```python
-users = Users(client)
+users = AsyncUsers(client)
 
 result = users.create(ID.unique(), email = "email@example.com", phone = "+123456789", password = "password", name = "Walter O'Brien")
 ```
 
 ### Full Example
 ```python
-from appwrite.client import Client
-from appwrite.services.users import Users
+from async_appwrite.async_client import AsyncClient
+from async_appwrite.services.async_users import AsyncUsers
 from appwrite.id import ID
 
-client = Client()
+client = AsyncClient()
 
 (client
   .set_endpoint('https://[HOSTNAME_OR_IP]/v1') # Your API Endpoint
@@ -64,7 +64,7 @@ client = Client()
   .set_self_signed() # Use only on dev mode with a self-signed SSL cert
 )
 
-users = Users(client)
+users = AsyncUsers(client)
 
 result = users.create(ID.unique(), email = "email@example.com", phone = "+123456789", password = "password", name = "Walter O'Brien")
 ```
@@ -73,7 +73,7 @@ result = users.create(ID.unique(), email = "email@example.com", phone = "+123456
 The Appwrite Python SDK raises `AppwriteException` object with `message`, `code` and `response` properties. You can handle any errors by catching `AppwriteException` and present the `message` to the user or handle it yourself based on the provided error information. Below is an example.
 
 ```python
-users = Users(client)
+users = AsyncUsers(client)
 try:
   result = users.create(ID.unique(), email = "email@example.com", phone = "+123456789", password = "password", name = "Walter O'Brien")
 except AppwriteException as e:
@@ -85,7 +85,7 @@ You can use the following resources to learn more and get help
 - 🚀 [Getting Started Tutorial](https://appwrite.io/docs/getting-started-for-server)
 - 📜 [Appwrite Docs](https://appwrite.io/docs)
 - 💬 [Discord Community](https://appwrite.io/discord)
-- 🚂 [Appwrite Python Playground](https://github.com/appwrite/playground-for-python)
+- 🚂 [Appwrite Python Playground](https://github.com/Humarr/async_appwrite_playground-for-python)
 
 
 ## Contribution
