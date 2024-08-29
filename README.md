@@ -44,9 +44,16 @@ client = AsyncClient()
 Once your SDK object is set, create any of the Appwrite service objects and choose any request to send. Full documentation for any service method you would like to use can be found in your SDK documentation or in the [API References](https://appwrite.io/docs) section.
 
 ```python
+
 users = AsyncUsers(client)
 
-result = users.create(ID.unique(), email = "email@example.com", phone = "+123456789", password = "password", name = "Walter O'Brien")
+async def create_user():
+    result = await users.create(ID.unique(), email="email@example.com", phone="+123456789", password="password", name="Walter O'Brien")
+    return result
+
+if __name__ == "__main__":
+    user_result = asyncio.run(create_user())
+    print(user_result)
 ```
 
 ### Full Example
@@ -98,7 +105,7 @@ You can use the following resources to learn more and get help
 - 🚀 [Getting Started Tutorial](https://appwrite.io/docs/getting-started-for-server)
 - 📜 [Appwrite Docs](https://appwrite.io/docs)
 - 💬 [Discord Community](https://appwrite.io/discord)
-- 🚂 [Appwrite Python Playground](https://github.com/Humarr/async_appwrite_playground-for-python)
+- 🚂 [Async Appwrite Python Playground](https://github.com/Humarr/async_appwrite_playground-for-python)
 
 
 ## Contribution
