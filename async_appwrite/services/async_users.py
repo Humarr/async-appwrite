@@ -20,9 +20,7 @@ class AsyncUsers(AsyncService):
         return await self.client.call(
             "get",
             api_path,
-            {
-                "content-type": "application/json",
-            },
+            {},
             api_params,
         )
 
@@ -117,9 +115,7 @@ class AsyncUsers(AsyncService):
         return await self.client.call(
             "get",
             api_path,
-            {
-                "content-type": "application/json",
-            },
+            {},
             api_params,
         )
 
@@ -352,9 +348,7 @@ class AsyncUsers(AsyncService):
         return await self.client.call(
             "get",
             api_path,
-            {
-                "content-type": "application/json",
-            },
+            {},
             api_params,
         )
 
@@ -462,9 +456,7 @@ class AsyncUsers(AsyncService):
         return await self.client.call(
             "get",
             api_path,
-            {
-                "content-type": "application/json",
-            },
+            {},
             api_params,
         )
 
@@ -481,9 +473,7 @@ class AsyncUsers(AsyncService):
         return await self.client.call(
             "get",
             api_path,
-            {
-                "content-type": "application/json",
-            },
+            {},
             api_params,
         )
 
@@ -566,9 +556,7 @@ class AsyncUsers(AsyncService):
         return await self.client.call(
             "get",
             api_path,
-            {
-                "content-type": "application/json",
-            },
+            {},
             api_params,
         )
 
@@ -695,9 +683,7 @@ class AsyncUsers(AsyncService):
         return await self.client.call(
             "get",
             api_path,
-            {
-                "content-type": "application/json",
-            },
+            {},
             api_params,
         )
 
@@ -738,9 +724,7 @@ class AsyncUsers(AsyncService):
         return await self.client.call(
             "get",
             api_path,
-            {
-                "content-type": "application/json",
-            },
+            {},
             api_params,
         )
 
@@ -844,9 +828,7 @@ class AsyncUsers(AsyncService):
         return await self.client.call(
             "get",
             api_path,
-            {
-                "content-type": "application/json",
-            },
+            {},
             api_params,
         )
 
@@ -903,9 +885,7 @@ class AsyncUsers(AsyncService):
         return await self.client.call(
             "get",
             api_path,
-            {
-                "content-type": "application/json",
-            },
+            {},
             api_params,
         )
 
